@@ -1,0 +1,11 @@
+const express=require('express');
+const path=require('path');
+const db=require('./database');
+const app=express();
+app.use(express.json());
+app.use(express.static(path.join(__dirname,'..')));
+app.get('/api/services',(req,res)=>db.all('SELECT * FROM services',[],(e,r)=>res.json(r||[])));
+app.post('/api/register',(req,res)=>{const {name,email,mobile,password}=req.body;db.run('INSERT INTO users(name,email,mobile,password) VALUES(?,?,?,?)',[name,email,mobile,password],function(e){if(e)return res.status(400).json({error:e.message});res.json({id:this.lastID})})});
+app.post('/api/appointments',(req,res)=>{const {name,mobile,service,date,time}=req.body;db.run('INSERT INTO appointments(name,mobile,service,date,time) VALUES(?,?,?,?,?)',[name,mobile,service,date,time],function(e){if(e)return res.status(400).json({error:e.message});res.json({id:this.lastID})})});
+app.post('/api/contact',(req,res)=>{const {name,email,message}=req.body;db.run('INSERT INTO contact_messages(name,email,message) VALUES(?,?,?)',[name,email,message],e=>{if(e)return res.status(400).json({error:e.message});res.json({success:true})})});
+app.listen(3000,()=>console.log('Beauty Parlor System running at http://localhost:3000'));

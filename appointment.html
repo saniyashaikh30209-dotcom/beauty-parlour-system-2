@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Appointment</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <nav>
+        <a class="logo" href="home.html">✨ Glow & Grace</a>
+        <div>
+            <a href="home.html">Home</a><a href="services.html">Services</a><a href="appointment.html">Appointment</a>
+            <a href="about.html">About</a><a href="contact.html">Contact</a><a href="login.html">Login</a>
+        </div>
+    </nav>
+    <section class="container">
+        <div class="title">
+            <h2>Book an Appointment</h2>
+            <p>Fill in your details and preferred service.</p>
+        </div>
+        <form onsubmit="bookAppointment(event)"><label>Name</label><input id="appName"
+                required><label>Mobile</label><input id="appMobile" required>
+            <label>Service</label><select id="appService" required>
+                <option value="">Select Service</option>
+                <option>Hair Cut & Styling</option>
+                <option>Hair Spa</option>
+                <option>Facial</option>
+                <option>Manicure</option>
+                <option>Pedicure</option>
+                <option>Bridal Makeup</option>
+            </select>
+            <label>Date</label><input id="appDate" type="date" required><label>Time</label><input id="appTime"
+                type="time" required>
+            <button class="btn" type="submit">Book Appointment</button>
+            <p class="notice" id="appMsg"></p>
+        </form>
+    </section>
+    <footer>
+        <p>© 2026 Glow & Grace Beauty Parlor Management System</p>
+        <p>Beauty • Care • Confidence</p>
+    </footer>
+    <script src="js/script.js"></script>
+</body>
+
+</html>

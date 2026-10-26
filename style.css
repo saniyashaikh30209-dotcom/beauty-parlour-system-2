@@ -1,0 +1,190 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif
+}
+
+body {
+    background: #fff7fb;
+    color: #3d2633;
+    line-height: 1.6
+}
+
+nav {
+    background: #fff;
+    padding: 18px 7%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 2px 12px #0001;
+    position: sticky;
+    top: 0;
+    z-index: 10
+}
+
+.logo {
+    font-size: 25px;
+    font-weight: 700;
+    color: #c43d79
+}
+
+nav a {
+    color: #3d2633;
+    text-decoration: none;
+    margin-left: 20px;
+    font-weight: 600
+}
+
+nav a:hover {
+    color: #c43d79
+}
+
+.hero {
+    padding: 90px 7%;
+    background: linear-gradient(120deg, #ffe3ef, #fff);
+    display: flex;
+    align-items: center;
+    min-height: 70vh
+}
+
+.hero div {
+    max-width: 650px
+}
+
+.hero h1 {
+    font-size: 52px;
+    color: #9f285d;
+    margin-bottom: 15px
+}
+
+.hero p {
+    font-size: 19px;
+    margin-bottom: 25px
+}
+
+.btn {
+    display: inline-block;
+    background: #c43d79;
+    color: white;
+    padding: 12px 22px;
+    border-radius: 25px;
+    text-decoration: none;
+    border: 0;
+    cursor: pointer;
+    font-weight: 700
+}
+
+.container {
+    width: 86%;
+    max-width: 1100px;
+    margin: 45px auto
+}
+
+.title {
+    text-align: center;
+    margin-bottom: 30px
+}
+
+.title h2 {
+    font-size: 34px;
+    color: #9f285d
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 22px
+}
+
+.card {
+    background: white;
+    padding: 25px;
+    border-radius: 15px;
+    box-shadow: 0 5px 20px #00000012
+}
+
+.card h3 {
+    color: #b5326c;
+    margin-bottom: 8px
+}
+
+.price {
+    font-weight: bold;
+    color: #9f285d;
+    margin: 12px 0
+}
+
+form {
+    max-width: 600px;
+    margin: auto;
+    background: white;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 5px 20px #00000012
+}
+
+input,
+select,
+textarea {
+    width: 100%;
+    padding: 12px;
+    margin: 8px 0 15px;
+    border: 1px solid #ddd;
+    border-radius: 8px
+}
+
+textarea {
+    min-height: 120px
+}
+
+footer {
+    text-align: center;
+    background: #3d2633;
+    color: white;
+    padding: 25px;
+    margin-top: 60px
+}
+
+.notice {
+    text-align: center;
+    margin: 15px auto;
+    max-width: 600px;
+    color: #9f285d;
+    font-weight: bold
+}
+
+table {
+    width: 100%;
+    background: #fff;
+    border-collapse: collapse;
+    box-shadow: 0 5px 20px #0001
+}
+
+th,
+td {
+    padding: 13px;
+    border-bottom: 1px solid #eee;
+    text-align: left
+}
+
+th {
+    background: #ffe3ef;
+    color: #9f285d
+}
+
+@media(max-width:700px) {
+    nav {
+        flex-direction: column;
+        gap: 10px
+    }
+
+    nav a {
+        margin: 5px;
+        font-size: 14px
+    }
+
+    .hero h1 {
+        font-size: 38px
+    }
+}
